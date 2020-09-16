@@ -1,0 +1,35 @@
+import VueRoute from 'vue-router'
+import Vue from 'vue'
+
+import create from './components/products/create'
+import index from './components/products/index'
+import edit from './components/products/edit'
+
+import createCategory from './components/categories/createCategory'
+import indexCategory from './components/categories/indexCategory'
+import editCategory from './components/categories/editCategory'
+
+
+
+	
+const routes = [
+
+{ path: '/products/create', component: create},
+{ path: '/products/index', component: index},
+{ path: '/products/edit/:id', component: edit},
+
+{ path: '/categories/createCategory', component: createCategory},
+{ path: '/categories/indexCategory', component: indexCategory},
+
+
+
+]
+
+Vue.use(VueRoute);
+
+const router = new VueRoute({
+	routes,
+	mode: 'history'
+});
+
+export default router
