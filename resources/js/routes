@@ -7,7 +7,7 @@ import edit from './components/products/edit'
 
 import createCategory from './components/categories/createCategory'
 import indexCategory from './components/categories/indexCategory'
-import editCategory from './components/categories/editCategory'
+
 
 
 

@@ -12,10 +12,10 @@
 					<hr>
 
 					<form  @submit.prevent="onSubmit"  class="form-horizontal" style="margin-left: 50px;">
-					<alert-success :form="form"> Category Added Successfully </alert-success>
+					<alert-success :form="formm"> Category Added Successfully </alert-success>
 						
 <label> Name: </label>
-						<input type="text" v-model ="form.name"class="form-control"name="name">
+						<input type="text" v-model ="formm.name"class="form-control"name="name">
 
 							<hr>
 					
@@ -40,7 +40,7 @@
 		name: "createCategory",
 		data(){
 			return {
-				form: new Form({
+				formm: new Form({
 					name: ''
 				
 
@@ -54,7 +54,7 @@
 * On submit form
 * */
 			onSubmit(){
-				this.form.post('/api/add-category').then((response) => {  })
+				this.formm.post('/api/add-category').then((response) => {  })
 							}
 		}
 
